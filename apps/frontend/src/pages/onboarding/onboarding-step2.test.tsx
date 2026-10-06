@@ -80,7 +80,7 @@ describe("OnboardingStep2 formatting region picker", () => {
 
     const regionPicker = screen.getByTestId("onboarding-formatting-locale");
     await user.click(within(regionPicker).getByRole("button", { name: "Other" }));
-    await user.click(screen.getByRole("button", { name: /India\s+IN/ }));
+    await user.click(screen.getByRole("button", { name: "IndiaIN" }));
 
     expect(screen.getByTestId("currency-inr-button")).toBeInTheDocument();
     expect(mocks.updateSettings).toHaveBeenCalledWith({ formattingRegion: "IN" });
