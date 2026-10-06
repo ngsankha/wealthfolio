@@ -1502,6 +1502,7 @@
     "description": "Steuert Datums-, Zeit-, Zahlen-, Prozent- und Währungsformate.",
     "options": {
       "system": "Systemregion",
+      "india": "Indien",
       "canada": "Kanada",
       "unitedStates": "Vereinigte Staaten",
       "unitedKingdom": "Vereinigtes Königreich",

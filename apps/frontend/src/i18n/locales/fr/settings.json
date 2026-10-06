@@ -1543,6 +1543,7 @@
     "description": "Contrôle les dates, les heures, les séparateurs de nombres, les pourcentages et l’affichage des devises.",
     "options": {
       "system": "Région du système",
+      "india": "Inde",
       "canada": "Canada",
       "unitedStates": "États-Unis",
       "unitedKingdom": "Royaume-Uni",

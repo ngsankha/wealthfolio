@@ -30,6 +30,7 @@ describe("locale formatting", () => {
     expect(resolveFormattingLocale("DE", "en")).toBe("de-DE");
     expect(resolveFormattingLocale("DE", "ja")).toBe("de-DE");
     expect(resolveFormattingLocale("TW", "en")).toBe("zh-TW");
+    expect(resolveFormattingLocale("IN", "en")).toBe("en-IN");
     expect(resolveFormattingLocale("en-US", "fr")).toBe("en-US");
   });
 
@@ -77,6 +78,14 @@ describe("locale formatting", () => {
   it("formats an English UI using the resolved Germany locale", () => {
     const formatter = createFormatter(resolveFormattingLocale("DE", "en"));
     expect(formatter.formatDecimal(1234.56)).toBe("1.234,56");
+  });
+
+  it("formats Indian numbers and INR currency using Indian grouping", () => {
+    const formatter = createFormatter(resolveFormattingLocale("IN"), "UTC");
+
+    expect(formatter.formatDecimal(123456789)).toBe("12,34,56,789");
+    expect(formatter.formatAmount(123456789, "INR")).toBe("₹12,34,56,789.00");
+    expect(formatter.formatCurrencySymbol("INR")).toBe("₹");
   });
 
   it.each(["en", "ja", "ko", "zh"])(

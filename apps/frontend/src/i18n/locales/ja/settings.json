@@ -1484,6 +1484,7 @@
     "description": "日付、時刻、数値の区切り、パーセント、通貨の表示形式を設定します。",
     "options": {
       "system": "システムの地域",
+      "india": "インド",
       "canada": "カナダ",
       "unitedStates": "アメリカ合衆国",
       "unitedKingdom": "イギリス",

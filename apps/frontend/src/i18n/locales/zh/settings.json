@@ -1484,6 +1484,7 @@
     "description": "控制日期、时间、数字分隔符、百分比和货币显示格式。",
     "options": {
       "system": "系统地区",
+      "india": "印度",
       "canada": "加拿大",
       "unitedStates": "美国",
       "unitedKingdom": "英国",

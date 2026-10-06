@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 
@@ -70,5 +70,19 @@ describe("OnboardingStep2 language picker", () => {
     // It takes the last popular slot rather than growing the row.
     expect(screen.queryByTestId("language-ko-button")).not.toBeInTheDocument();
     expect(screen.getByTestId("language-en-button")).toBeInTheDocument();
+  });
+});
+
+describe("OnboardingStep2 formatting region picker", () => {
+  it("offers India and suggests INR when selected", async () => {
+    const user = userEvent.setup();
+    renderStep2();
+
+    const regionPicker = screen.getByTestId("onboarding-formatting-locale");
+    await user.click(within(regionPicker).getByRole("button", { name: "Other" }));
+    await user.click(screen.getByRole("button", { name: /India\s+IN/ }));
+
+    expect(screen.getByTestId("currency-inr-button")).toBeInTheDocument();
+    expect(mocks.updateSettings).toHaveBeenCalledWith({ formattingRegion: "IN" });
   });
 });

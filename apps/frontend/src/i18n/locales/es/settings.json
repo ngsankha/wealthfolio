@@ -1543,6 +1543,7 @@
     "description": "Controla fechas, horas, separadores numéricos, porcentajes y la presentación de monedas.",
     "options": {
       "system": "Región del sistema",
+      "india": "India",
       "canada": "Canadá",
       "unitedStates": "Estados Unidos",
       "unitedKingdom": "Reino Unido",

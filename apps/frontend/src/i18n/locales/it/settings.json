@@ -1543,6 +1543,7 @@
     "description": "Controlla date, orari, separatori numerici, percentuali e presentazione delle valute.",
     "options": {
       "system": "Regione di sistema",
+      "india": "India",
       "canada": "Canada",
       "unitedStates": "Stati Uniti",
       "unitedKingdom": "Regno Unito",

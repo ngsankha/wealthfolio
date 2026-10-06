@@ -1462,6 +1462,7 @@
     "description": "Controls dates, times, number separators, percentages, and currency presentation.",
     "options": {
       "system": "System region",
+      "india": "India",
       "canada": "Canada",
       "unitedStates": "United States",
       "unitedKingdom": "United Kingdom",

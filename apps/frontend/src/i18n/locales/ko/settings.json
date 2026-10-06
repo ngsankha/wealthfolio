@@ -1484,6 +1484,7 @@
     "description": "날짜, 시간, 숫자 구분 기호, 백분율 및 통화 표시 형식을 설정합니다.",
     "options": {
       "system": "시스템 지역",
+      "india": "인도",
       "canada": "캐나다",
       "unitedStates": "미국",
       "unitedKingdom": "영국",

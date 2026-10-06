@@ -64,6 +64,7 @@ function detectDefaultCurrency(locale?: string): string | undefined {
   if (lang.startsWith("sv")) return "EUR";
   if (lang.startsWith("tr")) return "EUR";
   if (lang.startsWith("ar")) return "USD";
+  if (localeTag.endsWith("-in")) return "INR";
   if (lang.startsWith("hi")) return "INR";
   return undefined;
 }
@@ -92,6 +93,7 @@ const formattingRegions = [
   ["JP", "japan"],
   ["KR", "southKorea"],
   ["IT", "italy"],
+  ["IN", "india"],
 ] as const;
 
 const popularFormattingRegions = ["system", "US", "CA", "GB"];
